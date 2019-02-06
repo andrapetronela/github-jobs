@@ -8,7 +8,7 @@ class Jobs extends React.Component {
     }
     
     componentDidMount() {
-        fetch('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=python') 
+        fetch('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?') 
             .then(response => response.json())
             .then(data => {
                 this.setState({
@@ -40,12 +40,12 @@ class Jobs extends React.Component {
                         </div>
                     </header>
                     <section className="card__body">
-                        <h1>{this.state.jobs[index].title}</h1>
+                        <h1>{ this.state.jobs[index].title.length > 37 ? this.state.jobs[index].title.slice(0, 36) + ' ...' : this.state.jobs[index].title}</h1>
                         <p>{this.state.jobs[index].type}</p>
                         <p>Location: {this.state.jobs[index].location}</p>
                         <p>Company: {this.state.jobs[index].company}</p>
                         <p>Date: { my_date }</p>
-                        <a href={this.state.jobs[index].url} target='_blank'>
+                        <a href={this.state.jobs[index].url} target='_blank' className="card__button">
                             Read more
                         </a>
                     </section>
