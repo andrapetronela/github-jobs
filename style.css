@@ -12,10 +12,10 @@ body {
 .header__page {
     padding: 0 5rem;
     text-align: left;
-    font-weight: 300;
-    color: #d1d1d1;
+    color: rgba(198, 193, 193, 0.74);
     background: #24292e;
     display: flex;
+    justify-content: space-between;
     letter-spacing: 1px;
 }
 
@@ -31,43 +31,60 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 1rem 0;
-    height: 8rem;
+    text-align: center;
+    padding: 3rem 0;
+    height: 5rem;
+}
+
+.header__page-left p {
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .header__github-link:link,
 .header__github-link:visited {
     text-decoration: none;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 300;
+    font-size: 1.2rem;
+    font-weight: 600;
     color: #d1d1d1;
     position: relative;
     transition: all .5s ease;
-    z-index: 1;
 }
 
-.header__github-link::before {
+.header__github-link::after {
     content: '';
-    height: 0%;
-    width: 100%;
+    height: 1px;
+    width: 0%;
     display: block;
-    background: #d1d1d1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 1s ease-out;
-    z-index: -1;
+    background: rgba(230, 230, 230, 0.31);
+    margin: .5rem 0;
+    transition: width .5s ease-out;
 }
 
-.header__github-link:hover::before,
-.header__github-link:active::before {
-    height: 100%;
+.header__github-link:hover::after,
+.header__github-link:active::after {
+    width: 100%;
 }
 
 .header__github-link:hover,
 .header__github-link:active {
-    color: #222;
+    color: #fafafa;
+}
+
+.header__page-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__page-right i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.header__page-right i:hover {
+    color: #fff;
 }
 
 .cards-container {
