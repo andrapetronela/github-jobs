@@ -16,16 +16,14 @@ class Jobs extends React.Component {
                 })
             });
         
-        fetch('https://randomuser.me/api/?gender=female&results=100')
+        fetch('https://randomuser.me/api/?results=100')
             .then(response => response.json())
             .then(data => {
                 this.setState({
                     user: data.results
                 })
-            console.log(this.state.user)
             })
             .catch(err => console.log(err))
-        
     }
      
     render() {
@@ -38,6 +36,9 @@ class Jobs extends React.Component {
                 <div className="card" key={index}>
                     <header className="card__header">
                         <h1>{this.state.jobs[index].title}</h1>
+                        <div className="card__image">
+                            <img src={this.state.user[index].picture.medium} alt="user" />
+                        </div>
                     </header>
                     <section className="card__body">
                         <p>{this.state.jobs[index].type}</p>
