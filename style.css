@@ -29,6 +29,12 @@ body {
 
 .card {
     background: #d9a9b8;
-    padding: 2rem;
+/*    padding: 1rem 2rem;*/
     margin: 1rem;
+}
+
+.card__header {
+    background: #c7a6a6;
+    text-align: left;
+    padding: 1rem 2rem;
 }

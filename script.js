@@ -36,16 +36,18 @@ class Jobs extends React.Component {
                 let my_date = d[2] +' ' + d[1] + ' ' + d[5];
             return (
                 <div className="card" key={index}>
-                    <header>
+                    <header className="card__header">
                         <h1>{this.state.jobs[index].title}</h1>
                     </header>
-                    <p>{this.state.jobs[index].type}</p>
-                    <p>Location: {this.state.jobs[index].location}</p>
-                    <p>Company: {this.state.jobs[index].company}</p>
-                    <p>Date: { my_date }</p>
-                    <a href={this.state.jobs[index].url} target='_blank'>
-                        Read more
-                    </a>
+                    <section className="card__body">
+                        <p>{this.state.jobs[index].type}</p>
+                        <p>Location: {this.state.jobs[index].location}</p>
+                        <p>Company: {this.state.jobs[index].company}</p>
+                        <p>Date: { my_date }</p>
+                        <a href={this.state.jobs[index].url} target='_blank'>
+                            Read more
+                        </a>
+                    </section>
                 </div>
             )
         
