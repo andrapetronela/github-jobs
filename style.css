@@ -13,7 +13,7 @@ body {
     padding: 5rem;
     text-align: left;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.91);
+    color: #d1d1d1;
     background: #24292e;
 }
 
@@ -27,7 +27,8 @@ body {
 .card {
     background: #fff;
     font-family: Roboto;
-    color: #586069;
+    color: #666;
+    border-radius: 4px;
     line-height: 1.5;
     margin: 1rem;
     box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
@@ -35,6 +36,7 @@ body {
 
 .card__header {
     background: #24292e;
+    color: #586069;
     text-align: left;
     padding: 2rem 2rem 4rem;
     position: relative;
@@ -56,8 +58,9 @@ body {
 }
 
 .card__body {
-    padding: 4rem 2rem;
-    font-weight: 500;
+    padding: 4rem 2rem 2rem;
+    font-size: 15px;
+    line-height: 2;
 }
 
 .card__body h1 {
@@ -74,13 +77,24 @@ body {
     margin: 1rem auto;
 }
 
+.card__body span {
+    font-weight: 500;
+}
+
 .card__button:link,
 .card__button:visited {
     text-decoration: none;
-    background: #222;
+    background: rgba(38, 159, 66, 0.87);
     color: #fff;
+    letter-spacing: 1px;
     text-align: center;
     display: block;
     margin-top: 2rem;
     padding: 1rem 2rem;
+    transition: background .3s;
+}
+
+.card__button:hover,
+.card__button:active {
+    background: #269f42;
 }
