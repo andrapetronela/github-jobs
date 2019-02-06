@@ -40,10 +40,10 @@ class Jobs extends React.Component {
                         </div>
                     </header>
                     <section className="card__body">
-                        <h1>{ this.state.jobs[index].title.length > 35 ? this.state.jobs[index].title.slice(0, 35) + ' ...' : this.state.jobs[index].title}</h1>
+                        <h1>{ this.state.jobs[index].title.length > 30 ? this.state.jobs[index].title.slice(0, 30) + ' ...' : this.state.jobs[index].title}</h1>
                         <p><span>Type: </span>{this.state.jobs[index].type}</p>
                         <p><span>Location: </span> {this.state.jobs[index].location}</p>
-                        <p><span>Company: </span> {this.state.jobs[index].company}</p>
+                        <p><span>Company: </span> { this.state.jobs[index].company.length > 30 ? this.state.jobs[index].company.slice(0, 30) + '...' : this.state.jobs[index].company }</p>
                         <p><span>Posted: </span> { my_date }</p>
                         <a href={this.state.jobs[index].url} target='_blank' className="card__button">
                             Read more
@@ -57,7 +57,7 @@ class Jobs extends React.Component {
             <div className='container'>
                 <header className="header__page">
                     <h1>GitHub Jobs</h1>
-                    <p>Researching best developers</p>
+                    <p>Researching the best developers</p>
                 </header>
                 <main className="cards-container">
                     { jobs }
