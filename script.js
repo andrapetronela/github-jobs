@@ -3,18 +3,20 @@ class Jobs extends React.Component {
         super(props);
         this.state = {
             jobs: [],
-            user: []
+            user: [],
+            cities: [],
         }
     }
     
     componentDidMount() {
-        fetch('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?search=code') 
+        fetch('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?search=python') 
             .then(response => response.json())
             .then(data => {
                 this.setState({
                     jobs: data
                 })
-            });
+            })
+//            .catch(err => console.log(err));
         
         fetch('https://randomuser.me/api/?results=100')
             .then(response => response.json())
@@ -23,8 +25,15 @@ class Jobs extends React.Component {
                     user: data.results
                 })
             })
-            .catch(err => console.log(err))
-    }
+            .catch(err => console.log(err));
+        fetch('https://pixabay.com/api/?key=11478607-0eb32deca43fc9d409ff4f730&q=city&per_page=200')
+            .then(response => response.json())
+            .then(data => { 
+                this.setState({
+                    cities: data.hits
+                    })
+            console.log(this.state.cities[0].webformatURL)
+    })}
      
     render() {
 
@@ -35,7 +44,10 @@ class Jobs extends React.Component {
             return (
                 <div className="card" key={index}>
                     <header className="card__header">
-                        <div className="card__image">
+                        <div className="card__city">
+                            <img src={this.state.cities[index].webformatURL} alt="city" />
+                        </div>
+                        <div className="card__user">
                             <img src={this.state.user[index].picture.medium} alt="user" />
                         </div>
                     </header>

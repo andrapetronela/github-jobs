@@ -42,7 +42,17 @@ body {
     position: relative;
 }
 
-.card__image {
+.card__city img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card__user {
     text-align: center;
     position: absolute;
     left: 50%;
@@ -50,7 +60,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.card__image img {
+.card__user img {
     border-radius: 50%;
     filter: sepia(1);
     border: 2px solid #fff;
@@ -89,8 +99,8 @@ body {
     letter-spacing: 1px;
     text-align: center;
     display: block;
-    margin-top: 2rem;
-    padding: 1rem 2rem;
+    margin: 2rem auto 0;
+    padding: .5rem;
     transition: background .3s;
 }
 
