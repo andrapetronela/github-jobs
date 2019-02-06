@@ -72,7 +72,7 @@ class Jobs extends React.Component {
                         <i className="fab fa-github"></i>
                     </div>
                     <div className="header__page-left">
-                        <h1>GitHub Jobs</h1>
+                        <a href="https://jobs.github.com/" target="__blank" className="header__github-link">GitHub Jobs</a>
                         <p>Researching the best developers</p>
                     </div>
                     <div className="header__page-right">

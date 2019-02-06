@@ -10,12 +10,13 @@ body {
 }
 
 .header__page {
-    padding: 5rem;
+    padding: 0 5rem;
     text-align: left;
     font-weight: 300;
     color: #d1d1d1;
     background: #24292e;
     display: flex;
+    letter-spacing: 1px;
 }
 
 .header__logo {
@@ -24,6 +25,49 @@ body {
     display: flex;
     align-items: center;
     margin-right: 2rem;
+}
+
+.header__page-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem 0;
+    height: 8rem;
+}
+
+.header__github-link:link,
+.header__github-link:visited {
+    text-decoration: none;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #d1d1d1;
+    position: relative;
+    transition: all .5s ease;
+    z-index: 1;
+}
+
+.header__github-link::before {
+    content: '';
+    height: 0%;
+    width: 100%;
+    display: block;
+    background: #d1d1d1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s ease-out;
+    z-index: -1;
+}
+
+.header__github-link:hover::before,
+.header__github-link:active::before {
+    height: 100%;
+}
+
+.header__github-link:hover,
+.header__github-link:active {
+    color: #222;
 }
 
 .cards-container {
