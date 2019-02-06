@@ -68,8 +68,16 @@ class Jobs extends React.Component {
         return (
             <div className='container'>
                 <header className="header__page">
-                    <h1>GitHub Jobs</h1>
-                    <p>Researching the best developers</p>
+                    <div className="header__logo">
+                        <i className="fab fa-github"></i>
+                    </div>
+                    <div className="header__page-left">
+                        <h1>GitHub Jobs</h1>
+                        <p>Researching the best developers</p>
+                    </div>
+                    <div className="header__page-right">
+                        
+                    </div>
                 </header>
                 <main className="cards-container">
                     { jobs }
