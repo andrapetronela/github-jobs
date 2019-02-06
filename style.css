@@ -14,7 +14,7 @@ body {
     text-align: left;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.91);
-    background: #111;
+    background: #24292e;
 }
 
 .cards-container {
@@ -26,11 +26,15 @@ body {
 
 .card {
     background: #fff;
+    font-family: Roboto;
+    color: #586069;
+    line-height: 1.5;
     margin: 1rem;
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 }
 
 .card__header {
-    background: #c7a6a6;
+    background: #24292e;
     text-align: left;
     padding: 2rem 2rem 4rem;
     position: relative;
@@ -46,11 +50,25 @@ body {
 
 .card__image img {
     border-radius: 50%;
-    filter: blur(1px) sepia(1);
-    border: 1px solid #fff;
+    filter: sepia(1);
+    border: 2px solid #fff;
     transition: all .3s;
 }
 
 .card__body {
     padding: 4rem 2rem;
+}
+
+.card__body h1 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card__body h1::after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    display: block;
+    background: #f7f7f7;
+    margin: 1rem auto;
 }

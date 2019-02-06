@@ -35,12 +35,12 @@ class Jobs extends React.Component {
             return (
                 <div className="card" key={index}>
                     <header className="card__header">
-                        <h1>{this.state.jobs[index].title}</h1>
                         <div className="card__image">
                             <img src={this.state.user[index].picture.medium} alt="user" />
                         </div>
                     </header>
                     <section className="card__body">
+                        <h1>{this.state.jobs[index].title}</h1>
                         <p>{this.state.jobs[index].type}</p>
                         <p>Location: {this.state.jobs[index].location}</p>
                         <p>Company: {this.state.jobs[index].company}</p>
