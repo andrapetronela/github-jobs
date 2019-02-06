@@ -9,7 +9,7 @@ body {
     background: #d0d0d0;
 }
 
-header {
+.header__page {
     padding: 5rem;
     text-align: left;
     font-weight: 300;

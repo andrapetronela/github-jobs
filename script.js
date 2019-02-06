@@ -2,7 +2,8 @@ class Jobs extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            jobs: []
+            jobs: [],
+            user: []
         }
     }
     
@@ -13,7 +14,18 @@ class Jobs extends React.Component {
                 this.setState({
                     jobs: data
                 })
+            });
+        
+        fetch('https://randomuser.me/api/?gender=female&results=100')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({
+                    user: data.results
+                })
+            console.log(this.state.user)
             })
+            .catch(err => console.log(err))
+        
     }
      
     render() {
@@ -24,7 +36,9 @@ class Jobs extends React.Component {
                 let my_date = d[2] +' ' + d[1] + ' ' + d[5];
             return (
                 <div className="card" key={index}>
-                    <h1>{this.state.jobs[index].title}</h1>
+                    <header>
+                        <h1>{this.state.jobs[index].title}</h1>
+                    </header>
                     <p>{this.state.jobs[index].type}</p>
                     <p>Location: {this.state.jobs[index].location}</p>
                     <p>Company: {this.state.jobs[index].company}</p>
@@ -38,7 +52,7 @@ class Jobs extends React.Component {
         })
         return (
             <div className='container'>
-                <header>
+                <header className="header__page">
                     <h1>GitHub Jobs</h1>
                     <p>Researching Python developers</p>
                 </header>
