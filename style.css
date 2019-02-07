@@ -65,14 +65,13 @@ body {
 
 .header__page-left p {
     font-size: 14px;
-    font-weight: 600;
 }
 
 .header__github-link:link,
 .header__github-link:visited {
     text-decoration: none;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 300;
     color: #d1d1d1;
     position: relative;
     transition: all .5s ease;
@@ -224,9 +223,12 @@ body {
     .header__page-left {
         flex-direction: row;
         align-items: center;
+        padding: .2rem 0;
+        margin-left: 0;
     }
-    .header__github-link::after {
-        display: none;
+    .header__page {
+        padding: 0 .5rem;
+        letter-spacing: 0px;
     }
     .cards-container {
         grid-template-columns: repeat(2, 1fr);
@@ -248,7 +250,21 @@ body {
 }
 
 @media only screen and (max-width: 470px) {
+    .header__page {
+        padding: 1rem;
+    }
+    .header__page-left {
+        position: absolute;
+        top: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 3rem 0;
+    }
+    .header__github-link:link,
+    .header__github-link:visited {
+        color: #222;
+    }
     .cards-container {
-        margin: 2rem .5rem;
+        margin: 5rem .5rem;
     }
 }
