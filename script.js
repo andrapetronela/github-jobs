@@ -100,14 +100,14 @@ class Jobs extends React.Component {
                 </main>
                 <footer>
                     <section className="footer__left">
-                        <p>@ { year } GitHub</p>
+                        <p>@ { year } GitHub, Inc.</p>
                         <a href="#">Terms</a>
                         <a href="#">Privacy</a>
                         <a href="#">Security</a>
                         <a href="#">Status</a>
                         <a href="#">Help</a>
                     </section>
-                    <i className="fab fa-github"></i>
+                    <i className="fab fa-github footer__icon"></i>
                     <section>
                         <a href="#">Contact GitHub</a>
                         <a href="#">Pricing</a>
