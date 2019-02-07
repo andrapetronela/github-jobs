@@ -185,7 +185,11 @@ body {
     color: #7f7f80;
 }
 
-.card__icons span { color: #222;}
+.github-icon:hover {
+    color: #0366d6;
+}
+
+.card__icons span { color: #474848;}
 
 .eye__icon {
     margin-right: .5rem;

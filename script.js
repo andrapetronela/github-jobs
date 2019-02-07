@@ -83,12 +83,9 @@ class Jobs extends React.Component {
                         <p><span>Company: </span> { this.state.jobs[index].company.length > 30 ? this.state.jobs[index].company.slice(0, 30) + '...' : this.state.jobs[index].company }</p>
                         <p><span>Posted: </span> { my_date }</p>
                         <p className="card__icons">
-                            <span>
-                                <i className="far fa-eye eye__icon"></i>
-                            </span>
-                            { randomNr(index) }
-                            <span><i className="fas fa-code-branch branch__icon"></i></span>{ randomNr(index) }
-                            <span><i className="fas fa-star star__icon"></i></span> {randomNr(index)}
+                            <span> <i className="far fa-eye eye__icon github-icon"></i></span> { randomNr(index) }
+                            <span><i className="fas fa-code-branch branch__icon github-icon"></i></span>{ randomNr(index) }
+                            <span><i className="fas fa-star star__icon github-icon"></i></span> {randomNr(index)}
                         </p>
                         <a href={this.state.jobs[index].url} target='_blank' className="card__button">
                             Read more
