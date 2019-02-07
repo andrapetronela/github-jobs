@@ -180,8 +180,19 @@ body {
     font-weight: 500;
 }
 
+.card__icons {
+    margin-top: 2rem;
+    color: #7f7f80;
+}
+
+.card__icons span { color: #222;}
+
 .eye__icon {
     margin-right: .5rem;
+}
+
+.branch__icon {
+    margin: .5rem .5rem .5rem 1.5rem;
 }
 
 .card__button:link,
