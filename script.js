@@ -101,20 +101,20 @@ class Jobs extends React.Component {
                 <footer>
                     <section className="footer__left">
                         <p>@ { year } GitHub, Inc.</p>
-                        <a href="#">Terms</a>
-                        <a href="#">Privacy</a>
-                        <a href="#">Security</a>
-                        <a href="#">Status</a>
-                        <a href="#">Help</a>
+                        <a href="https://help.github.com/articles/github-terms-of-service/" target="_blank">Terms</a>
+                        <a href="https://help.github.com/articles/github-privacy-statement/" target="_blank">Privacy</a>
+                        <a href="https://github.com/security" target="_blank">Security</a>
+                        <a href="https://www.githubstatus.com/" target="_blank">Status</a>
+                        <a href="https://help.github.com/" target="_blank">Help</a>
                     </section>
                     <i className="fab fa-github footer__icon"></i>
                     <section className="footer__right">
-                        <a href="#">Contact GitHub</a>
-                        <a href="#">Pricing</a>
-                        <a href="#">API</a>
-                        <a href="#">Training</a>
-                        <a href="#">Blog</a>
-                        <a href="#">About</a>
+                        <a href="https://github.com/contact" target="_blank">Contact GitHub</a>
+                        <a href="https://github.com/pricing" target="_blank">Pricing</a>
+                        <a href="https://developer.github.com/" target="_blank">API</a>
+                        <a href="https://services.github.com/" target="_blank">Training</a>
+                        <a href="https://github.blog/" target="_blank">Blog</a>
+                        <a href="https://github.com/about" target="_blank">About</a>
                     </section>
                 </footer>
             </div>
