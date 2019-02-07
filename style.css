@@ -21,11 +21,19 @@ body {
 
 .header__logo {
     font-size: 2.5rem;
-    color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
+.header__logo a:link,
+.header__logo a:visited {
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s;
+}
+
+.header__logo a:hover {color: #000;}
 
 .searchBox {
     background: #474848;
@@ -109,7 +117,7 @@ body {
 .cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem;
+    grid-gap: 2.5rem;
     margin: 5rem;
 }
 
@@ -196,4 +204,51 @@ body {
 .card__button:hover,
 .card__button:active {
     background: #269f42;
+}
+
+@media only screen and (max-width: 1050px) {
+    .cards-container {
+        grid-gap: 1rem;
+        margin: 4rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .searchBox {
+        padding: .5rem;
+        margin-left: .5rem;
+    }
+    .header__page-left p {
+        display: none;
+    }
+    .header__page-left {
+        flex-direction: row;
+        align-items: center;
+    }
+    .header__github-link::after {
+        display: none;
+    }
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        margin: 2rem 25vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .cards-container {
+        margin: 2rem 15vw;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .cards-container {
+        margin: 2rem .5rem;
+    }
 }

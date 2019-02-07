@@ -18,7 +18,7 @@ class Jobs extends React.Component {
                     jobs: data
                 })
             })
-//            .catch(err => console.log(err));
+            .catch(err => console.log(err));
         
         fetch('https://randomuser.me/api/?results=100')
             .then(response => response.json())
@@ -82,7 +82,7 @@ class Jobs extends React.Component {
             <div className='container'>
                 <header className="header__page">
                     <div className="header__logo">
-                        <i className="fab fa-github"></i>
+                        <a href="https://github.com/" target="_blank"><i className="fab fa-github"></i></a>
                         <Search searchHandler={this.searchHandler} value={this.state.search} />
                     </div>
                     <div className="header__page-left">
