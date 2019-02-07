@@ -88,7 +88,7 @@ class Jobs extends React.Component {
                             </span>
                             { randomNr(index) }
                             <span><i className="fas fa-code-branch branch__icon"></i></span>{ randomNr(index) }
-                            
+                            <span><i className="fas fa-star star__icon"></i></span> {randomNr(index)}
                         </p>
                         <a href={this.state.jobs[index].url} target='_blank' className="card__button">
                             Read more

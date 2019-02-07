@@ -191,7 +191,7 @@ body {
     margin-right: .5rem;
 }
 
-.branch__icon {
+.branch__icon, .star__icon {
     margin: .5rem .5rem .5rem 1.5rem;
 }
 
