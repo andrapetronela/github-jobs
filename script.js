@@ -108,7 +108,7 @@ class Jobs extends React.Component {
                         <a href="#">Help</a>
                     </section>
                     <i className="fab fa-github footer__icon"></i>
-                    <section>
+                    <section className="footer__right">
                         <a href="#">Contact GitHub</a>
                         <a href="#">Pricing</a>
                         <a href="#">API</a>

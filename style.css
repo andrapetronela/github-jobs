@@ -244,6 +244,9 @@ footer a:active {
         grid-gap: 1rem;
         margin: 4rem 2rem;
     }
+    footer {
+        margin: 2rem;
+    }
 }
 
 @media only screen and (max-width: 960px) {
@@ -269,6 +272,22 @@ footer a:active {
         grid-gap: 2rem;
     }
 }
+@media only screen and (max-width: 850px) {
+    footer {
+        margin: 2rem 5rem;
+    }
+    .footer__left, .footer__right {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.8;
+    }
+    footer i {
+        margin: auto;
+    }
+    .footer__right {
+        text-align: right
+    }
+}
 
 @media only screen and (max-width: 750px) {
     .cards-container {
@@ -280,6 +299,9 @@ footer a:active {
 @media only screen and (max-width: 600px) {
     .cards-container {
         margin: 2rem 15vw;
+    }
+    footer {
+        margin: 2rem;
     }
 }
 
