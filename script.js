@@ -46,7 +46,16 @@ class Jobs extends React.Component {
     render() {
         let d = new Date();
         let year = d.getFullYear();
-       
+        
+        const randomNr = (i) => {
+            for (let x = 0; x <= this.state.jobs.length; x++) {
+                const viewsArr = [];
+                 let views = Math.floor(Math.random() * 50);
+                 viewsArr.push(views);
+                 return viewsArr[x];
+            }   
+        }
+               
         const searchedJob = this.state.jobs.filter(job => {
             const rgx = this.state.search.toLowerCase();
             return job.location.toLowerCase().includes(rgx);
@@ -55,8 +64,8 @@ class Jobs extends React.Component {
         
         const jobs = searchedJob.map((job, index) => {
             let d = this.state.jobs[index].created_at;
-                d = d.split(' ');
-                let my_date = d[2] +' ' + d[1] + ' ' + d[5];
+            d = d.split(' ');
+            let my_date = d[2] + ' ' + d[1] + ' ' + d[5];
             return (
                 <div className="card" key={index}>
                     <header className="card__header">
@@ -73,6 +82,12 @@ class Jobs extends React.Component {
                         <p><span>Location: </span> {searchedJob[index].location}</p>
                         <p><span>Company: </span> { this.state.jobs[index].company.length > 30 ? this.state.jobs[index].company.slice(0, 30) + '...' : this.state.jobs[index].company }</p>
                         <p><span>Posted: </span> { my_date }</p>
+                        <p>
+                            <span>
+                                <i className="far fa-eye eye__icon"></i>
+                            </span>
+                            { randomNr(index) }
+                        </p>
                         <a href={this.state.jobs[index].url} target='_blank' className="card__button">
                             Read more
                         </a>
