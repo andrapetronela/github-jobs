@@ -204,6 +204,10 @@ body {
 .card__button:active {
     background: #269f42;
 }
+::selection {
+    background: #474848;
+    color: #fafafa;
+}
 
 @media only screen and (max-width: 1050px) {
     .cards-container {

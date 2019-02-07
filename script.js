@@ -44,6 +44,8 @@ class Jobs extends React.Component {
     }
      
     render() {
+        let d = new Date();
+        let year = d.getFullYear();
        
         const searchedJob = this.state.jobs.filter(job => {
             const rgx = this.state.search.toLowerCase();
@@ -96,7 +98,25 @@ class Jobs extends React.Component {
                 <main className="cards-container">
                     { jobs }
                 </main>
-                
+                <footer>
+                    <section className="footer__left">
+                        <p>@ { year } GitHub</p>
+                        <a href="#">Terms</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Security</a>
+                        <a href="#">Status</a>
+                        <a href="#">Help</a>
+                    </section>
+                    <i className="fab fa-github"></i>
+                    <section>
+                        <a href="#">Contact GitHub</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">API</a>
+                        <a href="#">Training</a>
+                        <a href="#">Blog</a>
+                        <a href="#">About</a>
+                    </section>
+                </footer>
             </div>
         )
     }
@@ -105,7 +125,7 @@ class Jobs extends React.Component {
 class Search extends React.Component {
     render() {
         return (
-            <input className="searchBox" type="text" value={this.props.search} placeholder="Search by location" onChange={this.props.searchHandler} />
+            <input className="searchBox" type="text" value={this.props.search} placeholder="Search jobs by location" onChange={this.props.searchHandler} />
     )
     }
 }
