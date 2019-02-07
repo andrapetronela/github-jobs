@@ -23,8 +23,19 @@ body {
     font-size: 2.5rem;
     color: #fff;
     display: flex;
+    width: 25%;
     align-items: center;
+    justify-content: space-between;
     margin-right: 2rem;
+}
+
+.searchBox {
+    margin-left: 1rem;
+    background: #474848;
+    padding: .5rem;
+    border: none;
+    width: 100%;
+    border-radius: 4px;
 }
 
 .header__page-left {

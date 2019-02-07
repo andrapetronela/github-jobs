@@ -105,7 +105,7 @@ class Jobs extends React.Component {
 class Search extends React.Component {
     render() {
         return (
-            <input className="searchBox" type="text" value={this.props.search} placeholder="Search jobs" onChange={this.props.searchHandler} />
+            <input className="searchBox" type="text" value={this.props.search} placeholder="Search by location" onChange={this.props.searchHandler} />
     )
     }
 }
