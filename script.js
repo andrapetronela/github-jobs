@@ -5,7 +5,9 @@ class Jobs extends React.Component {
             jobs: [],
             user: [],
             cities: [],
+            search: '',
         }
+    this.searchHandler = this.searchHandler.bind(this);
     }
     
     componentDidMount() {
@@ -32,12 +34,24 @@ class Jobs extends React.Component {
                 this.setState({
                     cities: data.hits
                     })
-            console.log(this.state.cities[0].webformatURL)
     })}
+    
+    searchHandler = (ev) => {
+                
+        this.setState({
+            search: ev.target.value,
+        });
+    }
      
     render() {
-
-        const jobs = this.state.jobs.map((job, index) => {
+       
+        const searchedJob = this.state.jobs.filter(job => {
+            const rgx = this.state.search.toLowerCase();
+            return job.location.toLowerCase().includes(rgx);
+        });
+        
+        
+        const jobs = searchedJob.map((job, index) => {
             let d = this.state.jobs[index].created_at;
                 d = d.split(' ');
                 let my_date = d[2] +' ' + d[1] + ' ' + d[5];
@@ -54,7 +68,7 @@ class Jobs extends React.Component {
                     <section className="card__body">
                         <h1>{ this.state.jobs[index].title.length > 30 ? this.state.jobs[index].title.slice(0, 30) + ' ...' : this.state.jobs[index].title}</h1>
                         <p><span>Type: </span>{this.state.jobs[index].type}</p>
-                        <p><span>Location: </span> {this.state.jobs[index].location}</p>
+                        <p><span>Location: </span> {searchedJob[index].location}</p>
                         <p><span>Company: </span> { this.state.jobs[index].company.length > 30 ? this.state.jobs[index].company.slice(0, 30) + '...' : this.state.jobs[index].company }</p>
                         <p><span>Posted: </span> { my_date }</p>
                         <a href={this.state.jobs[index].url} target='_blank' className="card__button">
@@ -63,13 +77,13 @@ class Jobs extends React.Component {
                     </section>
                 </div>
             )
-        
         })
         return (
             <div className='container'>
                 <header className="header__page">
                     <div className="header__logo">
                         <i className="fab fa-github"></i>
+                        <Search searchHandler={this.searchHandler} value={this.state.search} />
                     </div>
                     <div className="header__page-left">
                         <a href="https://jobs.github.com/" target="__blank" className="header__github-link">GitHub Jobs</a>
@@ -88,6 +102,12 @@ class Jobs extends React.Component {
     }
 }
 
-
+class Search extends React.Component {
+    render() {
+        return (
+            <input className="searchBox" type="text" value={this.props.search} placeholder="Search jobs" onChange={this.props.searchHandler} />
+    )
+    }
+}
 
 ReactDOM.render(<Jobs />, document.getElementById('root'));
