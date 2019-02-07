@@ -10,7 +10,7 @@ body {
 }
 
 .header__page {
-    padding: 0 5rem;
+    padding: 0 2rem;
     text-align: left;
     color: rgba(198, 193, 193, 0.74);
     background: #24292e;
@@ -23,19 +23,26 @@ body {
     font-size: 2.5rem;
     color: #fff;
     display: flex;
-    width: 25%;
     align-items: center;
     justify-content: space-between;
-    margin-right: 2rem;
 }
 
 .searchBox {
-    margin-left: 1rem;
     background: #474848;
-    padding: .5rem;
+    padding: .5rem 2rem .5rem 1rem;
+    margin-left: 2rem;
     border: none;
-    width: 100%;
     border-radius: 4px;
+    align-self: center;
+    color: #e5e5e5;
+    transition: all .5s ease;
+}
+
+.searchBox:hover,
+.searchBox:focus {
+    background: #fff;
+    color: #474848;
+    padding: .5rem 6rem .5rem 1rem;
 }
 
 .header__page-left {
@@ -44,6 +51,7 @@ body {
     justify-content: space-around;
     text-align: center;
     padding: 3rem 0;
+    margin-left: -15rem;
     height: 5rem;
 }
 
