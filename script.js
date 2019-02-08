@@ -11,7 +11,7 @@ class Jobs extends React.Component {
     }
     
     componentDidMount() {
-        fetch('https://jobs.github.com/positions.json?search=python') 
+        fetch('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?search=python') 
             .then(response => response.json())
             .then(data => {
                 this.setState({

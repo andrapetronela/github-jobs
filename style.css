@@ -63,7 +63,6 @@ body {
     height: 90vh;
     background: #2f363d;
     background-image: url('https://github.githubassets.com/images/modules/marketplace/bg-hero.svg');
-    background-position: top;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 5rem;
@@ -322,10 +321,29 @@ footer a:active { text-decoration: underline; }
 }
 
 @media only screen and (max-width: 600px) {
+    .hero-section {
+        padding: 7rem 2rem 0;
+    }
+    .hero-image {
+        height: 10rem;
+    }
     .cards-container { margin: 2rem 15vw; }
     footer { margin: 2rem; }
 }
 
 @media only screen and (max-width: 470px) {
+    .hero-section {
+        padding: 7rem 1rem 0;
+    }
+    .title {
+        font-size: 1rem;
+    }
+    .title__github-link:link,
+    .title__github-link:visited {
+        font-size: 1.8rem;
+    }
+    .hero-image {
+        height: 8rem;
+    }
     .cards-container { margin: 5rem .5rem; }
 }
