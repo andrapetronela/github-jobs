@@ -77,6 +77,8 @@ body {
 
 .title p {
     display: block;
+    position: relative;
+    transition: all .3s;
 }
 
 .title__github-link:link,
@@ -110,11 +112,9 @@ body {
     transform: translateX(15px);
 }
 
-/*
-.title__github-link:hover + p {
-    transform: translateY(90px)
+.title__github-link:hover + p span {
+    display: none;
 }
-*/
 
 .hero-section-image-container {
     grid-column: 2 / 3;

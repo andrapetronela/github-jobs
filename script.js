@@ -117,7 +117,7 @@ class Jobs extends React.Component {
                 <section className="hero-section">
                     <div className="title">
                             <a href="https://jobs.github.com/" target="__blank" className="title__github-link">GitHub Jobs</a>
-                            <p>For great developers</p>
+                            <p>for <span>great</span> developers</p>
                     </div>
                     <div className="hero-section-image-container">
                         <img src="assets/images/github.svg" className="hero-image"/>
