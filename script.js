@@ -11,7 +11,7 @@ class Jobs extends React.Component {
     }
     
     componentDidMount() {
-        fetch('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?search=python') 
+        fetch('https://jobs.github.com/positions.json?search=python') 
             .then(response => response.json())
             .then(data => {
                 this.setState({
@@ -101,14 +101,17 @@ class Jobs extends React.Component {
                         <a href="https://github.com/" target="_blank"><i className="fab fa-github"></i></a>
                         <Search searchHandler={this.searchHandler} value={this.state.search} />
                     </div>
-                    <div className="header__page-left">
-                        <a href="https://jobs.github.com/" target="__blank" className="header__github-link">GitHub Jobs</a>
-                        <p>For great developers</p>
-                    </div>
+                    
                     <div className="header__page-right">
                         <i className="fas fa-bell header__page__icon"></i>
                     </div>
                 </header>
+                <section className="hero-section">
+                    <div className="title">
+                            <a href="https://jobs.github.com/" target="__blank" className="title__github-link">GitHub Jobs</a>
+                            <p>For great developers</p>
+                    </div>
+                </section>
                 <main className="cards-container">
                     { jobs }
                 </main>
