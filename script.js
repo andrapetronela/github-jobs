@@ -88,7 +88,7 @@ class Jobs extends React.Component {
                             <span><i className="fas fa-star star__icon github-icon"></i></span> {randomNr(index)}
                         </p>
                         <a href={this.state.jobs[index].url} target='_blank' className="card__button">
-                            <i className="fas fa-book book__icon"></i> New job
+                            <i className="fas fa-book book__icon"></i> Read more
                         </a>
                     </section>
                 </div>
