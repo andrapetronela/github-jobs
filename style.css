@@ -75,12 +75,17 @@ body {
     font-size: 1.3rem;
 }
 
+.title p {
+    display: block;
+}
+
 .title__github-link:link,
 .title__github-link:visited {
     text-decoration: none;
     font-size: 3rem;
     font-weight: 700;
-    color: #e5e5e5;
+    display: block;
+    color: #fafafa;
     position: relative;
     transition: all .5s ease;
 }
@@ -90,7 +95,7 @@ body {
     height: 1px;
     width: 0%;
     display: block;
-    background: #24292e;
+    background: #e5e5e5;
     margin: .5rem 0;
     transition: width .5s ease-out;
 }
@@ -102,8 +107,14 @@ body {
 
 .title__github-link:hover,
 .title__github-link:active {
-    color: #fafafa;
+    transform: translateX(15px);
 }
+
+/*
+.title__github-link:hover + p {
+    transform: translateY(90px)
+}
+*/
 
 .hero-section-image-container {
     grid-column: 2 / 3;

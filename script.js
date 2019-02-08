@@ -77,10 +77,18 @@ class Jobs extends React.Component {
                         </div>
                     </header>
                     <section className="card__body">
-                        <h1>{ this.state.jobs[index].title.length > 30 ? this.state.jobs[index].title.slice(0, 30) + ' ...' : this.state.jobs[index].title}</h1>
-                        <p><span>Type: </span>{this.state.jobs[index].type}</p>
-                        <p><span>Location: </span> {searchedJob[index].location}</p>
-                        <p><span>Company: </span> { this.state.jobs[index].company.length > 30 ? this.state.jobs[index].company.slice(0, 30) + '...' : this.state.jobs[index].company }</p>
+                        <h1>
+                            { this.state.jobs[index].title.length > 30 ? this.state.jobs[index].title.slice(0, 30) + ' ...' : this.state.jobs[index].title}
+                        </h1>
+                        <p> <span>Type: </span>
+                                     {this.state.jobs[index].type}
+                        </p>
+                        <p> <span>Location: </span> 
+                                     {searchedJob[index].location}
+                        </p>
+                        <p> <span>Company: </span> 
+                                     { this.state.jobs[index].company.length > 30 ? this.state.jobs[index].company.slice(0, 30) + '...' : this.state.jobs[index].company }
+                        </p>
                         <p><span>Posted: </span> { my_date }</p>
                         <p className="card__icons">
                             <span> <i className="far fa-eye eye__icon github-icon"></i></span> { randomNr(index) }
@@ -145,7 +153,12 @@ class Jobs extends React.Component {
 class Search extends React.Component {
     render() {
         return (
-            <input className="searchBox" type="text" value={this.props.search} placeholder="Search jobs by location" onChange={this.props.searchHandler} />
+            <input 
+            className="searchBox" 
+            type="text" 
+            value={this.props.search} 
+            placeholder="Search jobs by location" 
+            onChange={this.props.searchHandler} />
     )
     }
 }
