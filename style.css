@@ -186,7 +186,7 @@ body {
 }
 
 .card__icons {
-    margin-top: 2rem;
+    margin: 2rem 0;
     color: #7f7f80;
 }
 
@@ -207,19 +207,22 @@ body {
 .card__button:link,
 .card__button:visited {
     text-decoration: none;
-    background: rgba(38, 159, 66, 0.87);
+    background-image: linear-gradient(-180deg,#34d058,#28a745 90%);
     color: #fff;
     letter-spacing: 1px;
-    text-align: center;
-    display: block;
-    margin: 2rem auto 0;
-    padding: .5rem;
-    transition: background .3s;
+    font-weight: 500;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: all .3s;
 }
 
 .card__button:hover,
 .card__button:active {
-    background: #269f42;
+    background-image: linear-gradient(-180deg,#269f42,#34d058 90%)
+}
+
+.book__icon {
+    font-size: 1.2rem;
 }
 
 footer {

@@ -88,7 +88,7 @@ class Jobs extends React.Component {
                             <span><i className="fas fa-star star__icon github-icon"></i></span> {randomNr(index)}
                         </p>
                         <a href={this.state.jobs[index].url} target='_blank' className="card__button">
-                            Read more
+                            <i className="fas fa-book book__icon"></i> New job
                         </a>
                     </section>
                 </div>
@@ -103,7 +103,7 @@ class Jobs extends React.Component {
                     </div>
                     <div className="header__page-left">
                         <a href="https://jobs.github.com/" target="__blank" className="header__github-link">GitHub Jobs</a>
-                        <p>Researching the best jobs</p>
+                        <p>For great developers</p>
                     </div>
                     <div className="header__page-right">
                         <i className="fas fa-bell header__page__icon"></i>
