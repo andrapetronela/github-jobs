@@ -38,7 +38,7 @@ body {
     transition: all .3s;
 }
 
-.header__logo a:hover {color: #000;}
+.header__logo a:hover { color: #474848; }
 
 .searchBox {
     background: #474848;
@@ -102,27 +102,19 @@ body {
 }
 
 .title__github-link:hover::after,
-.title__github-link:active::after {
-    width: 100%;
-}
+.title__github-link:active::after { width: 100%; }
 
 .title__github-link:hover,
-.title__github-link:active {
-    transform: translateX(15px);
-}
+.title__github-link:active { transform: translateX(15px); }
 
-.title__github-link:hover + p span {
-    display: none;
-}
+.title__github-link:hover + p span { display: none; }
 
 .hero-section-image-container {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
 
-.hero-image {
-    height: 15rem;
-}
+.hero-image { height: 15rem; }
 
 .header__page-right {
     display: flex;
@@ -136,9 +128,7 @@ body {
     transition: all .3s;
 }
 
-.header__page-right i:hover {
-    color: #fff;
-}
+.header__page-right i:hover { color: #fff; }
 
 .cards-container {
     display: grid;
@@ -190,9 +180,7 @@ body {
     line-height: 2;
 }
 
-.card__body h1 {
-    font-size: 1.1rem;
-}
+.card__body h1 { font-size: 1.1rem; }
 
 .card__body h1::after {
     content: '';
@@ -203,28 +191,20 @@ body {
     margin: 1rem auto;
 }
 
-.card__body span {
-    font-weight: 500;
-}
+.card__body span { font-weight: 500; }
 
 .card__icons {
     margin: 2rem 0;
     color: #7f7f80;
 }
 
-.github-icon:hover {
-    color: #0366d6;
-}
+.github-icon:hover { color: #0366d6; }
 
 .card__icons span { color: #474848;}
 
-.eye__icon {
-    margin-right: .5rem;
-}
+.eye__icon { margin-right: .5rem; }
 
-.branch__icon, .star__icon {
-    margin: .5rem .5rem .5rem 1.5rem;
-}
+.branch__icon, .star__icon { margin: .5rem .5rem .5rem 1.5rem; }
 
 .card__button:link,
 .card__button:visited {
@@ -243,9 +223,7 @@ body {
     background-image: linear-gradient(-180deg,#269f42,#34d058 90%)
 }
 
-.book__icon {
-    font-size: 1.2rem;
-}
+.book__icon { font-size: 1.2rem; }
 
 footer {
     display: flex;

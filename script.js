@@ -63,7 +63,7 @@ class App extends React.Component {
         const jobs = searchedJob.map((job, index) => {
             let d = this.state.jobs[index].created_at;
             d = d.split(' ');
-            let my_date = d[2] + ' ' + d[1] + ' ' + d[5];
+            const my_date = d[2] + ' ' + d[1] + ' ' + d[5];
             return (
                 <div className="card" key={index}>
                     <header className="card__header">
