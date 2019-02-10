@@ -28,6 +28,7 @@ class Jobs extends React.Component {
                 })
             })
             .catch(err => console.log(err));
+        
         fetch('https://pixabay.com/api/?key=11478607-0eb32deca43fc9d409ff4f730&q=city&per_page=200')
             .then(response => response.json())
             .then(data => { 
@@ -150,17 +151,15 @@ class Jobs extends React.Component {
     }
 }
 
-class Search extends React.Component {
-    render() {
+const Search = ({search, searchHandler}) => {
         return (
             <input 
             className="searchBox" 
             type="text" 
-            value={this.props.search} 
+            value={search} 
             placeholder="Search jobs by location" 
-            onChange={this.props.searchHandler} />
+            onChange={searchHandler} />
     )
-    }
 }
 
 ReactDOM.render(<Jobs />, document.getElementById('root'));
