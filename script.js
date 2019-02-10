@@ -1,4 +1,4 @@
-class Jobs extends React.Component {
+class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -102,16 +102,7 @@ class Jobs extends React.Component {
         })
         return (
             <div className='container'>
-                <header className="header__page">
-                    <div className="header__logo">
-                        <a href="https://github.com/" target="_blank"><i className="fab fa-github"></i></a>
-                        <Search searchHandler={this.searchHandler} value={this.state.search} />
-                    </div>
-                    
-                    <div className="header__page-right">
-                        <i className="fas fa-bell header__page__icon"></i>
-                    </div>
-                </header>
+                <Header searchHandler={this.searchHandler} value={this.state.search}/>
                 <section className="hero-section">
                     <div className="title">
                             <a href="https://jobs.github.com/" target="__blank" className="title__github-link">GitHub Jobs</a>
@@ -128,6 +119,24 @@ class Jobs extends React.Component {
             </div>
         )
     }
+}
+
+
+const Header = ({ search, searchHandler }) => {
+    return (
+        <div>
+            <header className="header__page">
+                    <div className="header__logo">
+                        <a href="https://github.com/" target="_blank"><i className="fab fa-github"></i></a>
+                        <Search searchHandler={searchHandler} value={search} />
+                    </div>
+                    
+                    <div className="header__page-right">
+                        <i className="fas fa-bell header__page__icon"></i>
+                    </div>
+                </header>
+        </div>
+    )
 }
 
 const Search = ({ search, searchHandler }) => {
@@ -168,4 +177,4 @@ const Footer = () => {
         </div>
     )
 }
-ReactDOM.render(<Jobs />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
