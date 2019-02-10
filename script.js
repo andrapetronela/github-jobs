@@ -44,10 +44,7 @@ class Jobs extends React.Component {
         });
     }
      
-    render() {
-        let d = new Date();
-        let year = d.getFullYear();
-        
+    render() {        
         const randomNr = (i) => {
             for (let x = 0; x <= this.state.jobs.length; x++) {
                 const viewsArr = [];
@@ -127,7 +124,29 @@ class Jobs extends React.Component {
                 <main className="cards-container">
                     { jobs }
                 </main>
-                <footer>
+                <Footer />
+            </div>
+        )
+    }
+}
+
+const Search = ({ search, searchHandler }) => {
+        return (
+            <input 
+            className="searchBox" 
+            type="text" 
+            value={search} 
+            placeholder="Search jobs by location" 
+            onChange={searchHandler} />
+    )
+}
+
+const Footer = () => {
+    const d = new Date();
+    const year = d.getFullYear();
+    return (
+        <div>
+            <footer>
                     <section className="footer__left">
                         <p>@ { year } GitHub, Inc.</p>
                         <a href="https://help.github.com/articles/github-terms-of-service/" target="_blank">Terms</a>
@@ -146,20 +165,7 @@ class Jobs extends React.Component {
                         <a href="https://github.com/about" target="_blank">About</a>
                     </section>
                 </footer>
-            </div>
-        )
-    }
-}
-
-const Search = ({search, searchHandler}) => {
-        return (
-            <input 
-            className="searchBox" 
-            type="text" 
-            value={search} 
-            placeholder="Search jobs by location" 
-            onChange={searchHandler} />
+        </div>
     )
 }
-
 ReactDOM.render(<Jobs />, document.getElementById('root'));
