@@ -103,15 +103,7 @@ class App extends React.Component {
         return (
             <div className='container'>
                 <Header searchHandler={this.searchHandler} value={this.state.search}/>
-                <section className="hero-section">
-                    <div className="title">
-                            <a href="https://jobs.github.com/" target="__blank" className="title__github-link">GitHub Jobs</a>
-                            <p>for <span>great</span> developers</p>
-                    </div>
-                    <div className="hero-section-image-container">
-                        <img src="assets/images/github.svg" className="hero-image"/>
-                    </div>
-                </section>
+                <Homepage />
                 <main className="cards-container">
                     { jobs }
                 </main>
@@ -150,6 +142,22 @@ const Search = ({ search, searchHandler }) => {
     )
 }
 
+const Homepage = () => {
+    return (
+        <div>
+            <section className="hero-section">
+                    <div className="title">
+                            <a href="https://jobs.github.com/" target="__blank" className="title__github-link">GitHub Jobs</a>
+                            <p>for <span>great</span> developers</p>
+                    </div>
+                    <div className="hero-section-image-container">
+                        <img src="assets/images/github.svg" className="hero-image"/>
+                    </div>
+            </section>
+        </div>
+    )
+}
+
 const Footer = () => {
     const d = new Date();
     const year = d.getFullYear();
@@ -177,4 +185,5 @@ const Footer = () => {
         </div>
     )
 }
+
 ReactDOM.render(<App />, document.getElementById('root'));
