@@ -17,6 +17,7 @@ class App extends React.Component {
                 this.setState({
                     jobs: data
                 })
+            bell.classList.add('ring');
             })
             .catch(err => console.log(err));
         
@@ -35,7 +36,12 @@ class App extends React.Component {
                 this.setState({
                     cities: data.hits
                     })
-    })}
+            
+    })
+    
+    const bell = document.querySelector('.header__page__bell');
+    
+    }
     
     searchHandler = (ev) => {
                 
@@ -124,7 +130,7 @@ const Header = ({ search, searchHandler }) => {
                     </div>
                     
                     <div className="header__page-right">
-                        <i className="fas fa-bell header__page__icon"></i>
+                        <i className="fas fa-bell header__page__bell"></i>
                     </div>
                 </header>
         </div>

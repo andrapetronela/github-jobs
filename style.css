@@ -138,6 +138,50 @@ body {
 
 .header__page-right i:hover { color: #fff; }
 
+.ring {
+    transform-origin: 50% 4px;
+    animation: ringing-bell 4s ease-in-out;
+}
+
+@keyframes ringing-bell {
+      0% { 
+          transform: rotate(0); 
+          color: #fff;
+        }
+      1% { transform: rotate(30deg); }
+      3% { transform: rotate(-28deg); }
+      5% { transform: rotate(34deg); }
+      7% { transform: rotate(-32deg); }
+      9% { transform: rotate(30deg); }
+      11% { transform: rotate(-28deg); }
+      13% { transform: rotate(26deg); }
+      15% { transform: rotate(-24deg); }
+      17% { transform: rotate(22deg); }
+      19% { 
+          transform: rotate(-20deg); 
+          color: rgba(198, 193, 193, 0.74);
+        }
+      21% { transform: rotate(18deg); }
+      23% { transform: rotate(-16deg); }
+      25% { 
+          transform: rotate(14deg); 
+          color: #fff;
+        }
+      27% { transform: rotate(-12deg); }
+      29% { transform: rotate(10deg); }
+      31% { transform: rotate(-8deg); }
+      33% { transform: rotate(6deg); 
+            color: rgba(198, 193, 193, 0.74);
+        }
+      35% { transform: rotate(-4deg); }
+      37% { transform: rotate(2deg); }
+      39% { transform: rotate(-1deg); }
+      41% { transform: rotate(1deg); }
+
+      43% { transform: rotate(0); }
+      100% { transform: rotate(0); }
+}
+
 .cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
