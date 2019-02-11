@@ -99,15 +99,16 @@ body {
     background: #e5e5e5;
     margin: .5rem 0;
     transition: width .5s ease-out;
+    backface-visibility: hidden;
 }
 
 .title__github-link:hover::after,
 .title__github-link:active::after { width: 100%; }
 
 .title__github-link:hover,
-.title__github-link:active { transform: translateX(15px); }
-
-.title__github-link:hover + p span { display: none; }
+.title__github-link:active { 
+    transform: translateX(15px); 
+}
 
 .hero-section-image-container {
     grid-column: 2 / 3;
