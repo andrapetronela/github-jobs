@@ -115,7 +115,14 @@ body {
     grid-row: 2 / 3;
 }
 
-.hero-image { height: 15rem; }
+.hero-image { 
+    height: 15rem; 
+    transition: filter .3s;
+}
+
+.hero-image:hover {
+    filter: drop-shadow(0 -.5mm 0mm rgb(167, 14, 214));
+}
 
 .header__page-right {
     display: flex;
